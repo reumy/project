@@ -27,8 +27,9 @@
 
 /* Responsive */
 @media only screen and (max-width:450px){
-  .textBox {width:300px;}
+  .textBox {width:270px;}
   .textBox #box {width:200px;}
+  .textBox #btn {width:70px;}
   .listBox {display:block;}
   .listBox .todo {height: 200px; overflow-y: auto;}
   .listBox .done {height: 200px; overflow-y: auto;}
