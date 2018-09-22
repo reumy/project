@@ -27,10 +27,11 @@
 
 /* Responsive */
 @media only screen and (min-width:450px){
-	.listBox {display:grid; height: auto; overflow: hidden;}	
+  .listBox {display:grid;}
 }
 @media only screen and (max-width:450px){
-  .listBox {display:block; height: 200px; overflow-y: auto;}
   .textBox {width:400px;}
-	.textBox #box {width:300px;}
+  .textBox #box {width:300px;}
+  .listBox {display:block;}
+  .listBox .todo {height: 200px; overflow-y: auto;}
 }
