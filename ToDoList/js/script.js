@@ -20,6 +20,7 @@ function btnFunc(){
   var modiTxt = doc.createElement('span');
 
   inner.innerHTML = box.value;  
+  inner.className = 'inner';
   todoBtn.type = 'checkbox';
   todoBtn.checked = false;
   todoBtn.className = 'todoBtn';
