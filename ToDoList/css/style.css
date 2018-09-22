@@ -6,8 +6,8 @@
 .listBox {margin:30px; display:grid; grid-template-columns: 1fr 1fr; text-align:center;}
 .listBox .subTitle {border-bottom:1px solid #ddd; margin:0 10px 10px; padding-bottom:10px;}
 .listBox ul {padding: 0 10px;}
-.listBox ul li {margin-bottom:10px; height:20px;}
-.listBox ul li span {font-size: 14px;}
+.listBox ul li {margin-bottom:10px;}
+.listBox ul li .inner {font-size: 14px; padding: 0 25px;}
 .listBox ul li .modiBox {font-size: 14px; outline: none; border:none; text-align:center;}
 .listBox ul li .modiBtn {font-size:10px; float:right; color:#6e868a; border:none; background: none; line-height:20px; cursor:pointer;}
 .listBox .todo .subTitle {color:#4b9c7b;}
