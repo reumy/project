@@ -1,8 +1,8 @@
 * {margin:0; padding:0; list-style:none; font-family:arial; color:#bbb;}
 .title {font-size:20px; text-align: center; margin:20px 0;}
-.textBox {width:500px; margin:0 auto; overflow:hidden;}
-.textBox #box {width:400px; padding:10px 5px; border-radius: 5px 0 0 5px; border:1px solid #6e868a; float:left; outline: none;}
-.textBox #btn {width:100px; padding:11px; border:none; border-radius: 0 5px 5px 0; background:#6e868a; color:#fff; float:right; cursor:pointer;}
+.textBox {max-width:500px; margin:0 auto; overflow:hidden;}
+.textBox #box {width:70%; padding:10px 5px; border-radius: 5px 0 0 5px; border:1px solid #6e868a; float:left; outline: none;}
+.textBox #btn {width:30%; padding:11px; border:none; border-radius: 0 5px 5px 0; background:#6e868a; color:#fff; cursor:pointer;}
 .listBox {margin:30px; display:grid; grid-template-columns: 1fr 1fr; text-align:center;}
 .listBox .subTitle {border-bottom:1px solid #ddd; margin:0 10px 10px; padding-bottom:10px;}
 .listBox ul {padding: 0 10px;}
@@ -26,9 +26,9 @@
 .container .checkmark:after {left: 4px; top: 0px; width: 5px; height: 9px; border: solid white; border-width: 0 2px 2px 0; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg);}
 
 /* Responsive */
-@media only screen and (max-width:450px){
-  .textBox {width:300px;}
-  .textBox #box {width:230px;}
+@media only screen and (max-width:500px){
+  .textBox {width:80%;}
+  .textBox #box {width:70%;}
   .textBox #btn {width:70px;}
   .listBox {display:block; margin:30px 10px;}
   .listBox .todo #todoUl {height: 200px; overflow-y: auto;}
