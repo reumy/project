@@ -28,8 +28,8 @@
 /* Responsive */
 @media only screen and (max-width:500px){
   .textBox {width:80%;}
-  .textBox #box {width:70%;}
-  .textBox #btn {width:70px;}
+  .textBox #box {width:80%;}
+  .textBox #btn {width:20%;}
   .listBox {display:block; margin:30px 10px;}
   .listBox .todo #todoUl {height: 200px; overflow-y: auto;}
   .listBox .done #doneUl {height: 200px; overflow-y: auto;}
