@@ -31,6 +31,6 @@
   .textBox #box {width:230px;}
   .textBox #btn {width:70px;}
   .listBox {display:block; margin:30px 10px;}
-  .listBox .todo {height: 200px; overflow-y: auto;}
-  .listBox .done {height: 200px; overflow-y: auto;}
+  .listBox .todo #todoUl {height: 200px; overflow-y: auto;}
+  .listBox .done #doneUl {height: 200px; overflow-y: auto;}
 }
