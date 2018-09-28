@@ -11,6 +11,7 @@ btn.addEventListener('click', btnFunc);
 box.addEventListener('keyup', enterFunc);
 
 function btnFunc(){
+
   var newLi = doc.createElement('li');
   var inner = doc.createElement('span');
   var todoBtn = doc.createElement('input');
@@ -19,66 +20,76 @@ function btnFunc(){
   var modiBox = doc.createElement('input');
   var modiTxt = doc.createElement('span');
 
-  inner.innerHTML = box.value;  
-  inner.className = 'inner';
-  todoBtn.type = 'checkbox';
-  todoBtn.checked = false;
-  todoBtn.className = 'todoBtn';
-  modiBtn.type = 'button';
-  modiBtn.className = 'modiBtn';
-  modiBtn.value = 'MODIFY';
-  modiBox.className = 'modiBox';  
-  conBtn.type = 'button';
-  conBtn.value = 'CONFIRM';
-  conBtn.className = 'modiBtn';
+  if (!box.value) {
 
-  // Button Stlye
-  var todoLabel = doc.createElement('label');
-  var todoCss = doc.createElement('span');
-  todoLabel.className = 'container';
-  todoCss.className = 'checkmark';  
-  
-  newLi.appendChild(todoLabel); 
-  todoLabel.appendChild(todoBtn);
-  todoLabel.appendChild(todoCss);
-  newLi.appendChild(inner); 
-  newLi.appendChild(modiBtn);
-  todoUl.appendChild(newLi);
+    alert('Please enter blank');
 
-  box.value = "";
-  box.focus();
+  } else {
 
-  todoBtn.addEventListener('click', todoFunc);
-  modiBtn.addEventListener('click', modiFunc);
-  conBtn.addEventListener('click', confirmFunc);
+    inner.innerHTML = box.value;
+    inner.className = 'inner';
+    todoBtn.type = 'checkbox';
+    todoBtn.checked = false;
+    todoBtn.className = 'todoBtn';
+    modiBtn.type = 'button';
+    modiBtn.className = 'modiBtn';
+    modiBtn.value = 'MODIFY';
+    modiBox.className = 'modiBox';  
+    conBtn.type = 'button';
+    conBtn.value = 'CONFIRM';
+    conBtn.className = 'modiBtn';
 
-  function todoFunc(){
-    if (todoBtn.checked == true) {
-      newLi.removeChild(modiBtn);
-      doneUl.appendChild(newLi);
-    } else {
-      newLi.appendChild(modiBtn);
-      todoUl.appendChild(newLi);
-    }
-  }
-
-  function modiFunc(){
-    newLi.appendChild(conBtn);
-    newLi.removeChild(modiBtn);
-
-    newLi.appendChild(modiBox);
-    modiBox.value = inner.textContent;
-    modiBox.focus();
-    newLi.removeChild(inner);
-  }
-
-  function confirmFunc(){
+    // Button Stlye
+    var todoLabel = doc.createElement('label');
+    var todoCss = doc.createElement('span');
+    todoLabel.className = 'container';
+    todoCss.className = 'checkmark';  
+    
+    newLi.appendChild(todoLabel); 
+    todoLabel.appendChild(todoBtn);
+    todoLabel.appendChild(todoCss);
+    newLi.appendChild(inner); 
     newLi.appendChild(modiBtn);
-    newLi.removeChild(conBtn);
+    todoUl.appendChild(newLi);
 
-    newLi.appendChild(modiTxt);
-    modiTxt.innerHTML = modiBox.value;
-    newLi.removeChild(modiBox);    
+    box.value = "";
+    box.focus();
+    
+    todoBtn.addEventListener('click', todoFunc);
+    modiBtn.addEventListener('click', modiFunc);
+    conBtn.addEventListener('click', confirmFunc);
+
+    function todoFunc(){
+
+      if (todoBtn.checked == true) {
+        newLi.removeChild(modiBtn);
+        doneUl.appendChild(newLi);
+      } else {
+        newLi.appendChild(modiBtn);
+        todoUl.appendChild(newLi);
+      }
+    }
+
+    function modiFunc(){    
+
+      newLi.appendChild(conBtn);
+      newLi.removeChild(modiBtn);
+
+      newLi.appendChild(modiBox);
+      modiBox.value = inner.textContent;
+      modiBox.focus();
+      newLi.removeChild(inner);
+    }
+
+    function confirmFunc(){
+      
+      newLi.appendChild(modiBtn);
+      newLi.removeChild(conBtn);
+
+      newLi.appendChild(modiTxt);
+      modiTxt.innerHTML = modiBox.value;
+      newLi.removeChild(modiBox);    
+    }
   }
 }
 
@@ -87,5 +98,3 @@ function enterFunc(e){
     btnFunc();
   }
 }
-
-
